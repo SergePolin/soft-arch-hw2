@@ -24,14 +24,14 @@ This application processes video streams or files using various filters, providi
 
 1. Clone the repository:
 
-   ```
+   ```bash
    git clone https://github.com/SergePolin/soft-arch-hw2
    cd soft-arch-hw2
    ```
 
 2. Install the required dependencies:
 
-   ```
+   ```bash
    pip install -r requirements.txt
    ```
 
@@ -39,7 +39,7 @@ This application processes video streams or files using various filters, providi
 
 Run the application using the following command:
 
-```
+```bash
 python app.py [options]
 ```
 
@@ -52,19 +52,19 @@ python app.py [options]
 
 1. Process webcam input with grayscale and mirror filters:
 
-   ```
+   ```bash
    python app.py --source 0 --filters grayscale mirror
    ```
 
 2. Process a video file with edge detection and resize filters:
 
-   ```
+   ```bash
    python app.py --source path/to/video.mp4 --filters edge resize
    ```
 
 3. Apply all filters to webcam input:
 
-   ```
+   ```bash
    python app.py --source 0 --filters grayscale mirror resize edge
    ```
 
@@ -75,8 +75,10 @@ python app.py [options]
 - `app/filters.py`: Contains implementations of various filters
 - `app/video_processor.py`: Handles video input and output
 
-## Contact
+## Contributors
 
-Sergei Polin - <s.polin@innopolis.university>
-Eleonora Pikalo - <e.pikalo@innopolis.university>
-Sergey Katkov - <s.katkov@innopolis.university>
+| Name            | Email                           |
+| --------------- | ------------------------------- |
+| Sergei Polin    | <s.polin@innopolis.university>  |
+| Eleonora Pikalo | <e.pikalo@innopolis.university> |
+| Sergey Katkov   | <s.katkov@innopolis.university> |
