@@ -2,14 +2,25 @@
 
 This application processes video streams or files using various filters, providing a flexible and easy-to-use command-line interface for video manipulation.
 
+## Table of Contents
+
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Options](#options)
+  - [Examples](#examples)
+- [Project Structure](#project-structure)
+- [Contributors](#contributors)
+
 ## Features
 
 - Apply multiple filters to video streams or files
 - Support for the following filters:
-  - Grayscale: Converts the video to black and white
-  - Mirror: Flips the video horizontally
-  - Resize: Scales the video (default: 75% of original size)
-  - Edge Detection: Highlights edges in the video
+  - **Grayscale**: Converts the video to black and white
+  - **Mirror**: Flips the video horizontally
+  - **Resize**: Scales the video (default: 75% of original size)
+  - **Edge Detection**: Highlights edges in the video
 - Command-line interface for easy usage and customization
 - Real-time processing and display of filtered video
 - Support for both webcam input and video file processing
@@ -29,7 +40,14 @@ This application processes video streams or files using various filters, providi
    cd soft-arch-hw2
    ```
 
-2. Install the required dependencies:
+2. Create a virtual environment (optional but recommended):
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+
+3. Install the required dependencies:
 
    ```bash
    pip install -r requirements.txt
@@ -71,6 +89,7 @@ python app.py [options]
 ## Project Structure
 
 - `app.py`: Main application entry point
+- `app/__init__.py`: Initializes the app module
 - `app/pipeline.py`: Defines the video processing pipeline
 - `app/filters.py`: Contains implementations of various filters
 - `app/video_processor.py`: Handles video input and output

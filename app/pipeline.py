@@ -5,7 +5,7 @@ class Pipeline:
     def add_filter(self, filter):
         self.filters.append(filter)
 
-    def apply_filters(self, frame):
+    def process(self, frame):
         for filter in self.filters:
             frame = filter.execute(frame)
         return frame
@@ -17,7 +17,7 @@ def process_video(source, filters):
     if isinstance(source, str):
         cap = cv2.VideoCapture(source)
     else:
-        cap = cv2.VideoCapture(source)  # Default webcam
+        cap = cv2.VideoCapture(source)
 
     if not cap.isOpened():
         print(f"Error: Could not open video source {source}.")
@@ -38,7 +38,6 @@ def process_video(source, filters):
             else:
                 print(f"Warning: Unknown filter '{f}'. Skipping.")
     else:
-        # Default to all filters if none specified
         for f in available_filters.values():
             pipeline.add_filter(f)
 
@@ -48,7 +47,7 @@ def process_video(source, filters):
             print("End of video stream reached")
             break
 
-        processed_frame = pipeline.apply_filters(frame)
+        processed_frame = pipeline.process(frame)
 
         cv2.imshow('Processed Video', processed_frame)
 
