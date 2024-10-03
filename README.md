@@ -1,21 +1,8 @@
 # Video Processing Pipeline
 
-This project implements a **Video Processing Pipeline** using the **Pipes and Filters** architectural pattern. It processes video frames from a webcam or video file in real-time, applying various filters such as resizing, black and white conversion, mirroring, and saving frames.
-
-## Features
-
-- **Real-time Video Processing:** Capture and process video streams from a webcam or video file.
-- **Modular Filter System:** Utilize a pipes-and-filters architecture for easy management and extension of filters.
-- **Implemented Filters:**
-  - **Resize:** Adjust the dimensions of each video frame.
-  - **Black and White:** Convert color frames to grayscale.
-  - **Mirror:** Horizontally flip video frames.
-  - **Save:** Save processed frames to disk for later use.
-- **Extensible Design:** Easily add new filters to the pipeline with minimal effort.
+This project implements a **Video Processing Pipeline** using the **Pipes and Filters** pattern. It processes video frames from a webcam or video file in real-time, applying filters such as resizing, black and white conversion, mirroring, and saving frames.
 
 ## Architecture Overview
-
-The app follows the Pipes-and-Filters pattern. Each filter applies a transformation to video frames in sequence. The system is modular and easily extensible, allowing filters to be added or removed from the pipeline with minimal changes.
 
 ### Data Flow 
 
@@ -37,6 +24,18 @@ The app follows the Pipes-and-Filters pattern. Each filter applies a transformat
 
 - **Pipeline**: 
   - The `FramePipeline` class is responsible for managing the sequence of filters and ensuring that data flows correctly from one filter to the next. It uses a shared `queue` to handle the flow of frames, providing flexibility in adding, removing, or disabling filters as needed.
+
+
+## Features
+
+- **Real-time Video Processing:** Capture and process video streams from a webcam or video file.
+- **Modular Filter System:** Utilize a pipes-and-filters architecture for easy management and extension of filters.
+- **Implemented Filters:**
+  - **Resize:** Adjust the dimensions of each video frame.
+  - **Black and White:** Convert color frames to grayscale.
+  - **Mirror:** Horizontally flip video frames.
+  - **Save:** Save processed frames to disk for later use.
+- **Extensible Design:** Easily add new filters to the pipeline with minimal effort.
 
 ## Requirements
 
