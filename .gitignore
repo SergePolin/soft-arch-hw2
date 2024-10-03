@@ -1,2 +1,28 @@
-__pycache__
-.venv
+# Start Generation Here
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.csv
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+.env
+.venv/
+# End Generation Here
